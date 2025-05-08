@@ -30,7 +30,7 @@ public class ChatClient {
     public void startClient() {
         new Thread(() -> {
             try {
-                String line = "";
+                String line;
                 while ((line = in.readLine()) != null) {
                     onMessageReceived.accept(line);
                 }
